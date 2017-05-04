@@ -47,6 +47,10 @@ article{
 
 }
 
+cn {
+    font-family: courier new;
+}
+
 </style>
 
 </head>
@@ -345,6 +349,136 @@ article{
 </article>
 
 <h2 id="changes">Neuheiten</h2>
+
+<article>
+<h3>Dokumenttypangabe</h3>
+<p>HTML5-Dokumente beinhalten eine Dokumententypangabe in Form der Zeichenkette <cn>&lt!DOCTYPE html&gt</cn> um ein standardkonformes Rendering im Browser auszulösen.<br>Auf Versionierung wurde bewusst verzichtet, da HTML5 Rückwärtskompatibel ist und alle Elemente aus HTML 4.01 enthält.</p>
+<h3>Einbindung von SVG und MathML im Quelltext</h3>
+<p><ul>
+<li>Scalable Vector Graphics (SVG) ist eine Spezifikation zur Beschreibung zweidimensionaler Vektorgrafiken.</li>
+<li>Mathematical Markup Language (MathML) ist ein Dokumentenformat zur Darstellung mathematischer Formeln.</li>
+</ul></p>
+
+<h3>Strukturierende Elemente</h3>
+<table>
+<tr>
+<td><cn>figure</cn>, <cn>figcaption</cn></td>
+<td>Auszeichnung zusätzlicher Inhalte, beispielsweise Abbildungen mit Bildunterschriften</td>
+</tr>
+</table>
+<p>Zusätzlich zu den <cn>div</cn> Elementen, gibt es sechs neue Elemente, die zusätzlich die Art ihres Inhaltes definieren:
+<table>
+<tr>
+<td><cn>nav</cn></td>
+<td>Definiert Navigationslinks (Menü)</td>
+</tr>
+<tr>
+<td><cn>section</cn></td>
+<td>Definiert eine Sektion in einem Dokument</td>
+</tr>
+<tr>
+<td><cn>article</cn></td>
+<td>Definiert einen Artikel in einem Dokument</td>
+</tr>
+<tr>
+<td><cn>aside</cn></td>
+<td>Definiert Inhalt abseits des Seiteninhaltes</td>
+</tr>
+<tr>
+<td><cn>header</cn></td>
+<td>Definiert den Kopfbereich einer Seite/Sektion</td>
+</tr>
+<tr>
+<td><cn>footer</cn></td>
+<td>Definiert den Fussbereich einer Seite/Sektion</td>
+</tr>
+</table>
+
+<h3>Elemente zur Textauszeichnung</h3>
+<table>
+<tr>
+<td><cn>time</cn></td>
+<td>Definiert ein Datum / eine Zeit für dynamische Lokalisierung</td>
+</tr>
+<tr>
+<td><cn>wbr</cn></td>
+<td>Definiert eine mögliche Textumbruchsstelle in langen Wörtern</td>
+</tr>
+<tr>
+<td><cn><cn>ruby</cn>, <cn>rp</cn>, <cn>rt</cn></cn></td>
+<td>Definiert Ruby-Annotierungen zwecks Darstellung ostasiatischer Zeichen mit Hinweisen zur Aussprache</td>
+<td></td>
+</tr>
+<tr>
+<td><cn>mark</cn></td>
+<td>Definiert hervorgehobenen Text</td>
+</tr>
+</table>
+
+<h3>Multimedia-Elemente</h3>
+<table>
+<tr>
+<td><cn>audio</cn>, <cn>embed</cn>, <cn>source</cn>, <cn>track</cn>, <cn>video</cn></td>
+<td>Einbinden von Audio- und Video-Dateien erstmals ohne zusätzliches Plugin.</td>
+<tr>
+<td><cn>canvas</cn></td>
+<td>Definiert eine Zeichenfläche, auf der mittels Sktipten zweidimensionale Bilder gezeichnet werden können.</td>
+</tr>
+</table>
+
+<h3>Formularelemente</h3>
+<table>
+<tr>
+<td><cn>progress</cn></td>
+<td>Bildet den Fortschritt eines Prozesses ab</td>
+</tr>
+<tr>
+<td><cn>meter</cn></td>
+<td>Definiert einen messbaren Wert innerhalb eines gewissen Wertebereichs</td>
+</tr>
+<tr>
+<td><cn>datalist</cn></td>
+<td>Spezifiziert eine Liste an vordefinierten Optionen für Eingabesteuerungen (beispielsweise Vervollständigungsvorschläge)</td>
+</tr>
+<tr>
+<td><cn>keygen</cn></td>
+<td>Definiert ein Feld zur Generierung eines Schlüsselpaares für Folrmulare (forms)</td>
+</tr>
+<tr>
+<td><cn>output</cn></td>
+<td>Definiert das Ergebnis einer Berechnung</td>
+</tr>
+</table>
+<p>Das <cn>Input</cn> Element wurde erweitert:
+<ul>
+<li>Um neue Typen z. B. zur Eingabe von Suchbegriffen, Telefonnummern, URL- und E-Mail-Adressen, Datums- und Zeitangaben, Zahlen sowie Farbangaben</li>
+<li>Um neue Attribute z. B. zur automatischen Vervollständigung, automatische Fokusierung, Festlegung von Minima und Maxima, Textmustervalidierung sowie Platzhalter-Werte</li>
+</ul>
+
+<h3>Interaktive Elemente</h3>
+<table>
+<tr>
+<td><cn>details</cn>, <cn>summary</cn></td>
+<td>Der Inhalt des <cn>summary</cn>-Elements wird ständig angezeigt, der restliche Inhalt des <cn>details</cn>-Elements kann ein- und ausgeblendet werden.</td>
+</tr>
+<tr>
+<td><cn>menu</cn>, <cn>command</cn></td>
+<td>Das <cn>menu</cn>-Element dient als Struktur für einzelne <cn>command</cn>-Elemente als Interaktionspunkt in Werkzeugleisten und (Kontext-)Menüs</td>
+</tr>
+</table>
+
+<h3>Neue API's (Application Programming Interfaces)</h3>
+<p>
+<ul>
+<li>HTML Geolocation</li>
+<li>HTML Drag and Drop</li>
+<li>HTML Local Storage</li>
+<li>HTML Application Cache</li>
+</ul>
+</p>
+
+</article>
+
 <h2 id="tutorial">Tutorial</h2>
 <h2 id="quickref">Quickref</h2>
 
