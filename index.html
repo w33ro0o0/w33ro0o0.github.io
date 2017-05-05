@@ -476,25 +476,224 @@ cn {
 </tr>
 <tr>
 <td><cn>menu</cn>, <cn>command</cn></td>
-<td>Das <cn>menu</cn>-Element dient als Struktur für einzelne <cn>command</cn>-Elemente als Interaktionspunkt in Werkzeugleisten und (Kontext-)Menüs</td>
+<td>Das <cn>menu</cn>-Element dient als Struktur für einzelne <cn>command</cn>-Elemente als Interaktionspunkt in Werkzeugleisten und (Kontext-)Menüs.</td>
 </tr>
 </table>
 </article>
 
 <article>
 <h3>Neue API's (Application Programming Interfaces)</h3>
-<p>
-<ul>
-<li>HTML Geolocation</li>
-<li>HTML Drag and Drop</li>
-<li>HTML Local Storage</li>
-<li>HTML Application Cache</li>
-</ul>
+<p>HTML5 definiert einige neue Schnittstellen, die mittels JavaScript genutzt werden können um Webanwendungen zu erstellen:
+<table>
+<tr>
+<td>HTML Geolocation</td>
+<td>Bestimmung der geographischen Position des Users</td>
+</tr>
+<tr>
+<td>HTML Drag and Drop</td>
+<td>Ziehen und Einfügen an einem anderen Ort von HTML5 Elementen</td>
+</tr>
+<tr>
+<td>HTML Local Storage</td>
+<td>Lokale Speicherung von Benutzerdaten als Alternative zu Cookies</td>
+</tr>
+<tr>
+<td>HTML Application Cache</td>
+<td>Zwischenspeichern von Daten im Browser für Offline-Zugriff, Geschwindigkeit und reduzierte Serverlast</td>
+</tr>
+<tr>
+<td>HTML Web Workers</td>
+<td>Ausführen von JavaScript im Hintergrund, ohne die Performance der Seite zu beeinflussen</td>
+</tr>
+<tr>
+<td>HTML Server-Sent Events</td>
+<td>Updates der Seite vom Server aus</td>
+</tr>
+</table>
 </p>
-
 </article>
 
 <h2 id="tutorial">Tutorial</h2>
+
+<article>
+<h3>Basics</h3>
+<table>
+<tr>
+<td><iframe src="basics.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<head>
+<title>Basiscs</title>
+</head>
+<body>
+<h1>Gößte Überschrift</h1>
+<p>Das ist<br>ein Paragraph<br>mit Zeilenumbrüchen.</p>
+<hr>
+<h6>Kleinste Überschrift</h6>
+<pre>
+  Das ist ein vorformatierter Paragraph,
+
+  der Leerzeichen und Leerzeilen beinhaltet,
+
+  die so wie im Source auch im Browser angezeigt werden.
+</pre>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&lthtml&gt</cn></td>
+<td>Definiert die Wurzel eines HTML Dokuments</td>
+</tr>
+<tr>
+<td><cn>&ltbody&gt</cn></td>
+<td>Container für den sichtbaren Teil des HTML Dokuments</td>
+</tr>
+<tr>
+<td><cn>&lthead&gt</cn></td>
+<td>Container für Kopf-Elemente, wie Titel, Skripts, Styles oder Meta-Informationen</td>
+</tr>
+<tr>
+<td><cn>&lttile&gt</cn></td>
+<td>Definiert den Titel des HTML Dokuments im Kopfteil</td>
+</tr>
+<tr>
+<td><cn>&lth1&gt - &lth6&gt</cn></td>
+<td>Definiert Überschriften</td>
+</tr>
+<tr>
+<td><cn>&lthr&gt</cn></td>
+<td>Definiert eine thematische Änderung des Inhalts</td>
+</tr>
+<tr>
+<td><cn>&ltp&gt</cn></td>
+<td>Definiert einen Paragraphen</td>
+</tr>
+<tr>
+<td><cn>&ltbr&gt</cn></td>
+<td>Fügt einen einzelnen Zeilenumbruch ein</td>
+</tr>
+<tr>
+<td><cn>&ltpre&gt</cn></td>
+<td>Definiert einen vorformatierten Text</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3>Styles</h3>
+<table>
+<tr>
+<td><iframe src="style.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body style="background-color:blue;">
+<h1 style="color:red;font-family:verdana;">Rote Überschrift in Schriftart Verdana</h1>
+<p style="color:green;font-family:courier;">Grüner Paragraph in Schriftart Courier</p>
+<h1 style="font-size:300%;text-align:center;">Zentrierte Überschrift in dreifacher Schriftgröße</h1>
+<p style="text-align:reight;font-size:200%;">Rechtsbündiger Paragraph in zweifacher Schriftgröße</p>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>style</cn></td>
+<td>Attribut um den Style von HTML-Elementen mit folgenden Eigenschaften festzulegen</td>
+</tr>
+<tr>
+<td><cn>background-color</cn></td>
+<td>Hintergrundfarbe</td>
+</tr>
+<tr>
+<td><cn>color</cn></td>
+<td>Textfarbe</td>
+</tr>
+<tr>
+<td><cn>font-family</cn></td>
+<td>Schriftart</td>
+</tr>
+<tr>
+<td><cn>font-size</cn></td>
+<td>Schriftgröße</td>
+</tr>
+<tr>
+<td><cn>text-align</cn></td>
+<td>Textausrichtung</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3>Formatierung</h3>
+<table>
+<tr>
+<td><iframe src="format.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<b>fetter</b> Text<br>
+<em>hervorgehobener</em> Text<br>
+<i>kursiver</i> Text<br>
+<small>kleinerer</small> Text<br>
+<strong></strong>wichtiger Text<br>
+<sub>tiefgestellter</sub> Text<br>
+<sup>hochgestellter</sup> Text<br>
+<ins>eingefügter</ins> Text<br>
+<del>gelöschter</del> Text<br>
+<mark>markierter</mark> Text<br>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&ltb&gt</cn></td>
+<td>Definiert fetten Text</td>
+</tr>
+<tr>
+<td><cn>&ltem&gt</cn></td>
+<td>Definiert hervorgehobenen Text</td>
+</tr>
+<tr>
+<td><cn>&lti&gt</cn></td>
+<td>Definiert kursiven Text</td>
+</tr>
+<tr>
+<td><cn>&ltsmall&gt</cn></td>
+<td>Definiert kleineren Text</td>
+</tr>
+<tr>
+<td><cn>&ltstrong&gt</cn></td>
+<td>Definiert wichtigen Text</td>
+</tr>
+<tr>
+<td><cn>&ltsub&gt</cn></td>
+<td>Definiert tiefgestellten Text</td>
+</tr>
+<tr>
+<td><cn>&ltsup&gt</cn></td>
+<td>Definiert hochgestellten Text</td>
+</tr>
+<tr>
+<td><cn>&ltins&gt</cn></td>
+<td>Definiert eingefügten Text</td>
+</tr>
+<tr>
+<td><cn>&ltdel&gt</cn></td>
+<td>Definiert gelöschten Text</td>
+</tr>
+<tr>
+<td><cn>&ltmark&gt</cn></td>
+<td>Definiert markierten Text</td>
+</tr>
+</table>
+</article>
+
 <h2 id="quickref">Quickref</h2>
 
 </body>
