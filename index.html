@@ -4,9 +4,13 @@
 <title>HTML5 Überblick</title>
 
 <style>
-ul#navig {
+
+ul#nav {
     position: fixed;
     top: 0;
+}
+
+ul#nav, ul#tutnav {
     width: 100%;
     list-style-type: none;
     margin: 0;
@@ -15,12 +19,12 @@ ul#navig {
     background-color: #333;
 }
 
-ul#navig li {
+ul#nav li, ul#tutnav li {
     float: left;
     border-right:1px solid #bbb;
 }
 
-ul#navig li a {
+ul#nav li a, ul#tutnav li a {
     display: block;
     color: white;
     text-align: center;
@@ -28,7 +32,7 @@ ul#navig li a {
     text-decoration: none;
 }
 
-ul#navig li a:hover:not(.active) {
+ul#nav li a:hover:not(.active), ul#tutnav li a:hover:not(.active) {
     background-color: #111;
 }
 
@@ -57,12 +61,12 @@ cn {
 
 <body>
 
-<ul id="navig">
+<ul id="nav">
   <li><a href="#about">About</a></li>
   <li><a href="#editors">Editoren</a></li>
   <li><a href="#theory">Theorie</a></li>
   <li><a href="#changes">Neuheiten</a></li>
-  <li><a href="#tutorial">Tutorial</a></li>
+  <li><a href="#tutorial">Tutorial</a></li>  
   <li><a href="#quickref">Quickref</a></li>
 </ul>
 
@@ -93,7 +97,7 @@ cn {
 <h3>Notepad++</h3>
 <table>
 <tr>
-<td rowspan=5 text-align ="top"><img src="notepad4ever.gif" width="300px"></td>
+<td rowspan=5 text-align ="top"><img src="images/notepad4ever.gif" width="300px"></td>
 <td><b>Hersteller:</b></td>
 <td>Don Ho</td>
 </tr><tr>
@@ -133,7 +137,7 @@ cn {
 <h3>Sublime Text</h3>
 <table>
 <tr>
-<td rowspan=5 text-align ="top"><img src="sublime.png" width="300px"></td>
+<td rowspan=5 text-align ="top"><img src="images/sublime.png" width="300px"></td>
 <td><b>Hersteller:</b></td>
 <td>Sublime</td>
 </tr><tr>
@@ -173,7 +177,7 @@ cn {
 <h3>Adobe Dreamweaver</h3>
 <table>
 <tr>
-<td rowspan=5 text-align ="top"><img src="dreamweaver-cs6.jpg"  width="300px"></td>
+<td rowspan=5 text-align ="top"><img src="images/dreamweaver-cs6.jpg"  width="300px"></td>
 <td><b>Hersteller:</b></td>
 <td>Adobe</td>
 </tr><tr>
@@ -213,7 +217,7 @@ cn {
 <h3>BlueGriffon</h3>
 <table>
 <tr>
-<td rowspan=5 text-align ="top"><img src="bluegriffon.png"  width="300px"></td>
+<td rowspan=5 text-align ="top"><img src="images/bluegriffon.png"  width="300px"></td>
 <td><b>Hersteller:</b></td>
 <td>Disruptive Innovations SAS</td>
 </tr><tr>
@@ -515,8 +519,18 @@ cn {
 
 <h2 id="tutorial">Tutorial</h2>
 
+
+<ul id="tutnav">
+  <li><a href="#basics">Basics</a></li>
+  <li><a href="#style">Styles</a></li>
+  <li><a href="#format">Formatierung</a></li>
+  <li><a href="#quote">Zitate</a></li>
+  <li><a href="#link">Hyperlinks</a></li>  
+  <li><a href="#image">Bilder</a></li>
+</ul>
+
 <article>
-<h3>Basics</h3>
+<h3 id="basics">Basics</h3>
 <table>
 <tr>
 <td><iframe src="basics.html" height="300" width="600"></iframe></td>
@@ -583,17 +597,17 @@ cn {
 </article>
 
 <article>
-<h3>Styles</h3>
+<h3 id="style">Styles</h3>
 <table>
 <tr>
 <td><iframe src="style.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <body style="background-color:blue;">
-<h1 style="color:red;font-family:verdana;">Rote Überschrift in Schriftart Verdana</h1>
-<p style="color:green;font-family:courier;">Grüner Paragraph in Schriftart Courier</p>
-<h1 style="font-size:300%;text-align:center;">Zentrierte Überschrift in dreifacher Schriftgröße</h1>
-<p style="text-align:reight;font-size:200%;">Rechtsbündiger Paragraph in zweifacher Schriftgröße</p>
+<h1 style="color:rgb(255,0,0);font-family:verdana;">Rote Überschrift in Schriftart Verdana</h1>
+<p style="color:#FFFF00;font-family:courier;">Gelber Paragraph in Schriftart Courier</p>
+<h1 style="font-size:100%;text-align:center;">Zentrierte Überschrift in einfacher Schriftgröße</h1>
+<p style="text-align:right;font-size:200%;">Rechtsbündiger Paragraph in zweifacher Schriftgröße</p>
 </body>
 </html>
 </xmp></td>
@@ -628,7 +642,7 @@ cn {
 </article>
 
 <article>
-<h3>Formatierung</h3>
+<h3 id="format">Formatierung</h3>
 <table>
 <tr>
 <td><iframe src="format.html" height="300" width="600"></iframe></td>
@@ -690,6 +704,169 @@ cn {
 <tr>
 <td><cn>&ltmark&gt</cn></td>
 <td>Definiert markierten Text</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="quote">Zitate</h3>
+<table>
+<tr>
+<td><iframe src="quote.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<p>Inline-Zitat: <q>Lorem ipsum dolor sit amet</q></p>
+<p>Block-Zitat:</p>
+<blockquote cite="http://www.loremipsum.de/">
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+</blockquote>
+<p>Abkürzung / Akronym: <abbr title="Hypertext Markup Language">HTML</abbr></p>
+<p>Kontaktinformationen:<address>
+Max Mustermann<br>
+max@musterman.com<br>
+Musterstraße 1, 1234 Musterland
+</address></p>
+<p>Titel eines Werkes: <cite>De finibus bonorum et malorum</cite> von Cicero.</p>
+<p>Text von links nach rechts.
+<bdo dir="rtl">Text von rechts nach links.</bdo></p>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&ltq&gt</cn></td>
+<td>Definiert ein Inline-Zitat</td>
+</tr>
+<tr>
+<td><cn>&ltblockquote&gt</cn></td>
+<td>Definiert ein Block-Zitat</td>
+</tr>
+<tr>
+<td><cn>&ltabbr&gt</cn></td>
+<td>Definiert eine Abkürzung oder ein Akkronym</td>
+</tr>
+<tr>
+<td><cn>&ltaddress&gt</cn></td>
+<td>Definiert Kontaktinformationen des Autors/Inhabers des Dokuments</td>
+</tr>
+<tr>
+<td><cn>&ltcite&gt</cn></td>
+<td>Definiert den Titel eines Werkes</td>
+</tr>
+<tr>
+<td><cn>&ltbdo&gt</cn></td>
+<td>Definiert eine Textrichtung</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="link">Hyperlinks</h3>
+<table>
+<tr>
+<td><iframe src="link.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<h2 id="headline">Überschrift</h2><br>
+<a href="https://w33ro0o0.github.io/">Link zu externer URL dieser Webseite</a><br>
+<a href="index.html">Link zu internem Dokument dieser Webseite</a><br>
+<a href="https://w33ro0o0.github.io/" target="_blank">Öffnen in neuem Fenster</a><br>
+<a href="https://w33ro0o0.github.io/" target="_top">Öffnen in gesamtem Fenster</a><br>
+<a href="https://w33ro0o0.github.io/" target="_self">Öffnen in aktuellem Frame (default)</a><br>
+<a href="https://w33ro0o0.github.io/" target="_parent">Öffnen in übergeornetem Frame</a><br><br>
+<a href="index.html">
+  <img src="html5.gif" alt="HTML5 Projekt">
+</a><br><br>
+<a href="#headline">Link zum Überschrift-Bookmark</a><br>
+<a href="index.html#tutorial">Link zum Tutorial-Bookmark dieser Webseite</a>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&lta&gt</cn></td>
+<td>Definiert einen Hyperlink</td>
+</tr>
+<tr>
+<td><cn>href</cn></td>
+<td>Attribut um Ziel-Adresse/Bookmark eines Links zu definieren</td>
+</tr>
+<tr>
+<td><cn>target</cn></td>
+<td>Attribut um zu definieren, ob der Link im aktuellen (<cn>_self</cn>) oder übergeordneten (<cn>_parent</cn>) Frame bzw. im aktuellen (<cn>_top</cn>) oder neuem (<cn>_blank</cn>) Fenster geöffnet werden soll.</td>
+</tr>
+<td><cn>&ltimg&gt</cn></td>
+<td>Verwendet innerhalb von &lta&gt ein Bild als Hyperlink</td>
+</tr>
+<tr>
+<td><cn>id</cn></td>
+<td>Definiert ein Bookmark in einer Seite</td>
+</tr>
+<tr>
+</table>
+</article>
+
+<article>
+<h3 id="image">Bilder</h3>
+<table>
+<tr>
+<td><iframe src="image.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<img src="images/falschername.gif" alt="Fehlertext">
+<p><img src="images/html5.gif" alt="HTML5 Icon" style="float:left;width:64px;height:64px;">Lorem ipsum dolor sit amet</p><br><br>
+<p><img src="https://w33ro0o0.github.io/images/html5.gif" alt="HTML5 Icon" style="float:right" width="64" height="64">Lorem ipsum dolor sit amet</p><br><br>
+<img src="images/planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;">
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="images/sun.gif">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="images/merglobe.gif">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="images/venglobe.gif">
+</map>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&ltimg&gt</cn></td>
+<td>Definiert ein Bild</td>
+</tr>
+<tr>
+<td><cn>src</cn></td>
+<td>Attribut um die URL eines Bildes zu definieren</td>
+</tr>
+<tr>
+<td><cn>alt</cn></td>
+<td>Attribut um einen alternativen Text zu definieren, falls das Bild nicht angezeigt werden kann</td>
+</tr>
+<tr>
+<td><cn>width</cn>, <cn>height</cn></td>
+<td>HTML Attribute und CSS Eigenschaften (style) um die Größe des Bildes zu definieren</td>
+</tr>
+<tr>
+<td><cn>float</cn></td>
+<td>CSS Eigenschaft (style) um das Bild links oder rechts von Text anzuzeigen</td>
+</tr>
+<tr>
+<td><cn>&ltmap&gt</cn></td>
+<td>Definiert eine Image Map</td>
+</tr>
+<tr>
+<td><cn>&ltarea&gt</cn></td>
+<td>Definiert klickbare Bereiche innerhalb eine Image Map</td>
+</tr>
+<tr>
+<td><cn>usemap</cn></td>
+<td>Attribut des <cn>&ltimg&gt</cn> Elements um eine Image Map anzugeben</td>
 </tr>
 </table>
 </article>
