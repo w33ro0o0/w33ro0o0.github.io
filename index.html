@@ -527,6 +527,8 @@ cn {
   <li><a href="#quote">Zitate</a></li>
   <li><a href="#link">Hyperlinks</a></li>  
   <li><a href="#image">Bilder</a></li>
+  <li><a href="#table">Tabellen</a></li>
+  <li><a href="#list">Listen</a></li>
 </ul>
 
 <article>
@@ -616,7 +618,7 @@ cn {
 <table>
 <tr>
 <td><cn>style</cn></td>
-<td>Attribut um den Style von HTML-Elementen mit folgenden Eigenschaften festzulegen</td>
+<td>Attribut um den Style von HTML-Elementen mit folgenden CSS Eigenschaften festzulegen</td>
 </tr>
 <tr>
 <td><cn>background-color</cn></td>
@@ -850,11 +852,11 @@ Musterstraße 1, 1234 Musterland
 </tr>
 <tr>
 <td><cn>width</cn>, <cn>height</cn></td>
-<td>HTML Attribute und CSS Eigenschaften (style) um die Größe des Bildes zu definieren</td>
+<td>HTML Attribute und CSS Eigenschaften um die Größe des Bildes zu definieren</td>
 </tr>
 <tr>
 <td><cn>float</cn></td>
-<td>CSS Eigenschaft (style) um das Bild links oder rechts von Text anzuzeigen</td>
+<td>CSS Eigenschaft um das Bild links oder rechts von Text anzuzeigen</td>
 </tr>
 <tr>
 <td><cn>&ltmap&gt</cn></td>
@@ -867,6 +869,166 @@ Musterstraße 1, 1234 Musterland
 <tr>
 <td><cn>usemap</cn></td>
 <td>Attribut des <cn>&ltimg&gt</cn> Elements um eine Image Map anzugeben</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="table">Tabellen</h3>
+<table>
+<tr>
+<td><iframe src="table.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<table style="width:100%;border:1px solid black;border-collapse:collapse;border-spacing:0px">
+  <caption>Beschreibung der Tabelle mit Rahmen ohne Platz zwischen den Zellen</caption>
+  <tr>
+    <th style="border:1px solid black;padding: 15px">Kopfzelle mit Padding</th>
+    <th style="border:1px solid black" colspan="2">Kopfzelle über 2 Zellen</th>
+  </tr>
+  <tr>
+    <td rowspan="2" style="border:1px solid black;vertical-align:bottom">Zelle über zwei Reihen mit Text unten</td>
+	<td style="border:1px solid black;background-color:black;color:white">Zelle mit weißem Text auf schwarzem Hintergrund</td>
+    <td style="border:1px solid black;padding: 15px">Zelle mit Padding</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border:1px solid black;text-align:right">Zelle über zwei Zeilen mit Text rechts</td>
+  </tr>
+</table>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&lttable&gt</cn></td>
+<td>Definiert eine Tabelle</td>
+</tr>
+<tr>
+<td><cn>&lttr&gt</cn></td>
+<td>Definiert eine Tabellenreihe</td>
+</tr>
+<tr>
+<td><cn>&lttd&gt</cn></td>
+<td>Definiert eine Tabellenzelle</td>
+</tr>
+<tr>
+<td><cn>&ltth&gt</cn></td>
+<td>Definiert eine Kopfzelle</td>
+</tr>
+<tr>
+<td><cn>&ltcaption&gt</cn></td>
+<td>Definiert eine Tabellenbeschreibung</td>
+</tr>
+<tr>
+<td><cn>border</cn></td>
+<td>CSS Eigenschaft um einen Rahmen zu definieren</td>
+</tr>
+<tr>
+<td><cn>border-collapse</cn></td>
+<td>CSS Eigenschaft um angrenzende Rahmen zusammenzuführen</td>
+</tr>
+<tr>
+<td><cn>padding</cn></td>
+<td>CSS Eigenschaft um Abstand zwischen Rahmen und Zelleninhalt zu definieren</td>
+</tr>
+<tr>
+<td><cn>text-align</cn></td>
+<td>CSS Eigenschaft zur horizontalen Textausrichtung</td>
+</tr>
+<tr>
+<td><cn>vertical-align</cn></td>
+<td>CSS Eigenschaft zur vertikalen Textausrichtung</td>
+</tr>
+<tr>
+<td><cn>border-spacing</cn></td>
+<td>CSS Eigenschaft um Abstand zwischen den Zellen zu definieren</td>
+</tr>
+<tr>
+<td><cn>colspan</cn></td>
+<td>Attribut um eine Zelle über mehrere Spalten zu strecken</td>
+</tr>
+<tr>
+<td><cn>rowspan</cn></td>
+<td>Attribut um eine Zelle über mehrere Zeilen zu strecken</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="list">Listen</h3>
+<table>
+<tr>
+<td><iframe src="list.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<ul style="list-style-type:disc">
+  <li>ungeordnete Liste</li>
+  <li>Standard
+    <ul style="list-style-type:circle">
+      <li>ungeordnete Unterliste</li>
+      <li>mit Kreisen</li>
+</ul></li></ul><ul style="list-style-type:square">
+  <li>ungeordnete Liste</li>
+  <li>mit Vierecken
+    <ul style="list-style-type:none">
+      <li>ungeordnete Liste</li>
+      <li>ohne Aufzählungszeichen</li>
+</ul></li></ul>
+<ol type="1">
+  <li>geordnete Liste</li>
+  <li>Standard</li>
+</ol><ol type="A">
+  <li>geordnete Liste</li>
+  <li>mit Großbuchstaben
+    <ol type="a">
+      <li>geordnete Unterliste</li>
+      <li>mit Kleinbuchstaben</li>
+</ol></li></ol><ol type="I">
+  <li>geordnete UnterListe</li>
+  <li>mit großen römischen Ziffern
+    <ol type="i">
+      <li>geordnete Unterliste</li>
+      <li>mit kleinen römischen Ziffern</li>
+</ol></li></ol>
+<dl>
+  <dt>Begriff 1</dt>
+  <dd>- Beschreibung 1</dd>
+  <dt>Begriff 2</dt>
+  <dd>- Beschreibung 2</dd>
+</dl>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&ltul&gt</cn></td>
+<td>Definiert eine ungeordnete Liste</td>
+</tr>
+<tr>
+<td><cn>&ltol&gt</cn></td>
+<td>Definiert eine geordnete Liste</td>
+</tr>
+<tr>
+<td><cn>&ltli&gt</cn></td>
+<td>Definiert einen Listeneintrag</td>
+</tr>
+<tr>
+<td><cn>&ltdl&gt</cn></td>
+<td>Definiert eine Beschreibungsliste</td>
+</tr>
+<tr>
+<td><cn>&ltdt&gt</cn></td>
+<td>Definiert einen Begriff in einer Beschreibungsliste</td>
+</tr>
+<tr>
+<td><cn>&ltdd&gt</cn></td>
+<td>Definiert eine Beschreibung in einer Beschreibungsliste</td>
 </tr>
 </table>
 </article>
