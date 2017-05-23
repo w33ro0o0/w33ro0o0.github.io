@@ -37,7 +37,7 @@ ul#nav li a:hover:not(.active), ul#tutnav li a:hover:not(.active) {
 }
 
 th, td {
-    padding: 15px;
+    padding: 10px;
 }
 
 table {
@@ -66,7 +66,8 @@ cn {
   <li><a href="#editors">Editoren</a></li>
   <li><a href="#theory">Theorie</a></li>
   <li><a href="#changes">Neuheiten</a></li>
-  <li><a href="#tutorial">Tutorial</a></li>  
+  <li><a href="#html">HTML5 Tutorial</a></li>
+  <li><a href="#css">CSS3 Tutorial</a></li>  
   <li><a href="#quickref">Quickref</a></li>
 </ul>
 
@@ -517,7 +518,7 @@ cn {
 </p>
 </article>
 
-<h2 id="tutorial">Tutorial</h2>
+<h2 id="html">HTML5 Tutorial</h2>
 
 
 <ul id="tutnav">
@@ -529,19 +530,23 @@ cn {
   <li><a href="#image">Bilder</a></li>
   <li><a href="#table">Tabellen</a></li>
   <li><a href="#list">Listen</a></li>
+  <li><a href="#section">Sections</a></li>
+  <li><a href="#code">Computercode</a></li>
+  <li><a href="#entity">Symbole</a></li>
 </ul>
 
 <article>
 <h3 id="basics">Basics</h3>
 <table>
 <tr>
-<td><iframe src="basics.html" height="300" width="600"></iframe></td>
+<td><iframe src="html/basics.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <head>
 <title>Basiscs</title>
 </head>
 <body>
+<!-- Das ist ein Kommentar -->
 <h1>Gößte Überschrift</h1>
 <p>Das ist<br>ein Paragraph<br>mit Zeilenumbrüchen.</p>
 <hr>
@@ -602,7 +607,7 @@ cn {
 <h3 id="style">Styles</h3>
 <table>
 <tr>
-<td><iframe src="style.html" height="300" width="600"></iframe></td>
+<td><iframe src="html/style.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <body style="background-color:blue;">
@@ -647,7 +652,7 @@ cn {
 <h3 id="format">Formatierung</h3>
 <table>
 <tr>
-<td><iframe src="format.html" height="300" width="600"></iframe></td>
+<td><iframe src="html/format.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <body>
@@ -714,7 +719,7 @@ cn {
 <h3 id="quote">Zitate</h3>
 <table>
 <tr>
-<td><iframe src="quote.html" height="300" width="600"></iframe></td>
+<td><iframe src="html/quote.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <body>
@@ -770,7 +775,7 @@ Musterstraße 1, 1234 Musterland
 <h3 id="link">Hyperlinks</h3>
 <table>
 <tr>
-<td><iframe src="link.html" height="300" width="600"></iframe></td>
+<td><iframe src="html/link.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <body>
@@ -782,7 +787,7 @@ Musterstraße 1, 1234 Musterland
 <a href="https://w33ro0o0.github.io/" target="_self">Öffnen in aktuellem Frame (default)</a><br>
 <a href="https://w33ro0o0.github.io/" target="_parent">Öffnen in übergeornetem Frame</a><br><br>
 <a href="index.html">
-  <img src="html5.gif" alt="HTML5 Projekt">
+  <img src="../images/html5.gif" alt="HTML5 Projekt">
 </a><br><br>
 <a href="#headline">Link zum Überschrift-Bookmark</a><br>
 <a href="index.html#tutorial">Link zum Tutorial-Bookmark dieser Webseite</a>
@@ -819,18 +824,18 @@ Musterstraße 1, 1234 Musterland
 <h3 id="image">Bilder</h3>
 <table>
 <tr>
-<td><iframe src="image.html" height="300" width="600"></iframe></td>
+<td><iframe src="html/image.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <body>
-<img src="images/falschername.gif" alt="Fehlertext">
-<p><img src="images/html5.gif" alt="HTML5 Icon" style="float:left;width:64px;height:64px;">Lorem ipsum dolor sit amet</p><br><br>
+<img src="../images/falschername.gif" alt="Fehlertext">
+<p><img src="../images/html5.gif" alt="HTML5 Icon" style="float:left;width:64px;height:64px;">Lorem ipsum dolor sit amet</p><br><br>
 <p><img src="https://w33ro0o0.github.io/images/html5.gif" alt="HTML5 Icon" style="float:right" width="64" height="64">Lorem ipsum dolor sit amet</p><br><br>
-<img src="images/planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;">
+<img src="../images/planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;">
 <map name="planetmap">
-  <area shape="rect" coords="0,0,82,126" alt="Sun" href="images/sun.gif">
-  <area shape="circle" coords="90,58,3" alt="Mercury" href="images/merglobe.gif">
-  <area shape="circle" coords="124,58,8" alt="Venus" href="images/venglobe.gif">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="../images/sun.gif">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="../images/merglobe.gif">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="../images/venglobe.gif">
 </map>
 </body>
 </html>
@@ -877,7 +882,7 @@ Musterstraße 1, 1234 Musterland
 <h3 id="table">Tabellen</h3>
 <table>
 <tr>
-<td><iframe src="table.html" height="300" width="600"></iframe></td>
+<td><iframe src="html/table.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <body>
@@ -961,7 +966,7 @@ Musterstraße 1, 1234 Musterland
 <h3 id="list">Listen</h3>
 <table>
 <tr>
-<td><iframe src="list.html" height="300" width="600"></iframe></td>
+<td><iframe src="html/list.html" height="300" width="600"></iframe></td>
 <td><xmp>
 <html>
 <body>
@@ -1031,6 +1036,405 @@ Musterstraße 1, 1234 Musterland
 <td>Definiert eine Beschreibung in einer Beschreibungsliste</td>
 </tr>
 </table>
+</article>
+
+<article>
+<h3 id="section">Sections</h3>
+<table>
+<tr>
+<td><iframe src="html/section.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<div style="background-color:black;color:white;padding:20px;">
+  <h2>Lorem ipsum</h2>
+  <p>dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+</div>
+<h1>Stet clita kasd gubergren, no sea takimata sanctus est <span style="color:red">Lorem ipsum</span> dolor sit amet.</h1>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&ltdiv&gt</cn></td>
+<td>Definiert eine Sektion in einem Dokument (block-level)</td>
+</tr>
+<tr>
+<td><cn>&ltspan&gt</cn></td>
+<td>Definiert eine Sektion in einem Dokument (inline)</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="code">Computercode</h3>
+<table>
+<tr>
+<td><iframe src="html/code.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<p>Tastatureingabe: <kbd>Enter</kbd></p>
+<p>Programmausgabe: <samp>Error!</samp></p>
+<p>Computercode: <code>return "Error"</code></p>
+<p>Variablen: <var>a</var><sup>2</sup>=<var>b</var><sup>2</sup>+<var>c</var><sup>2</sup>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&ltkbd&gt</cn></td>
+<td>Definiert eine Tastatureingabe</td>
+</tr>
+<tr>
+<td><cn>&ltsamp&gt</cn></td>
+<td>Definiert Computeroutput</td>
+</tr>
+<tr>
+<td><cn>&ltcode&gt</cn></td>
+<td>Definiert Programmcode</td>
+</tr>
+<tr>
+<td><cn>&ltvar&gt</cn></td>
+<td>Definiert eine Variable</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="entity">Symbole</h3>
+<table>
+<tr>
+<td><iframe src="html/entity.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<body>
+<p>Symbole, die in HTML5 reserviert oder nicht am Keyboard sind:<br>
+&lt;	&gt; &amp; &quot; &apos; &cent; &pound; &yen; &euro; &copy; &reg;</p>
+<p>Wortpaare, die nicht durch Zeilenumbrüche getrennt werden:<br>
+100&nbsp;km/h, 100&nbsp;PS,100&nbsp;&euro;</p>
+<p>Diakritika kombinieren:<br>
+a&#768; a&#769; a&#770; a&#771;</p>
+<p>Weitere Entities:
+<ul>
+<li>Mathematik: &forall; &part; &exist;</li>
+<li>Griechisch: &Alpha; &Beta; &Gamma;</li>
+<li>Sonstige: &larr; &uarr; &rarr; &darr; &spades; &clubs; &hearts; &diams;</li>
+</ul>
+</p>
+<a href="https://www.w3schools.com/html/html_symbols.asp">Link zu allen Symbolen</a>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>&amp;entity_name;</cn></td>
+<td>HTML Entity über ihren Namen</td>
+</tr>
+<tr>
+<td><cn>&amp;entity_number;</cn></td>
+<td>HTML Entity über ihre Nummer</td>
+</tr>
+</table>
+</article>
+
+<h2 id="css">CSS3 Tutorial</h2>
+
+<ul id="tutnav">
+  <li><a href="#css_basics">Basics</a></li>
+  <li><a href="#css_backgrounds">Hintergründe</a></li>
+  <li><a href="#css_border">Rahmen</a></li>
+</ul>
+
+<article>
+<h3 id="css_basics">Basics</h3>
+<table>
+<tr>
+<td><iframe src="css/basics.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>basics.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="basics.css">
+<style>
+body {
+    background-color: orange;
+}
+h1 {
+    background-color: red;
+    color: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Überschrift 1</h1>
+<h1 style="color:blue;">Überschrift 1 mit inline style</h1>
+<h1 id="headline1">Überschrift 1 mit der ID "headline1"</h1>
+<h1 class="class1">Überschrift 1 der Klasse "class1"</h1>
+<p>Paragraph</p>
+<p style="color:blue;">Paragraph mit inline style</p>
+<p id="paragraph1">Paragraph mit der ID "paragraph1"</p>
+<p class="class1">Paragraph der Klasse "class1"</p>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+/* Das ist ein CSS Kommentar */
+body {
+    background-color: yellow;
+}
+h1, p {
+    background-color: green;
+    color: yellow;
+}
+#headline1 {
+    background-color: blue;
+    color: yellow;
+}
+#paragraph1 {
+    background-color: red;
+    color: cyan;
+}
+.class1 {
+    background-color: black;
+    color: white;
+}
+p.class1 {
+    background-color: white;
+    color: black;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+</table>
+</article>
+
+<article>
+<h3 id="css_backgrounds">Hintergründe</h3>
+<table>
+<tr>
+<td><iframe src="css/background1.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<head>
+<style>
+body {
+    background-image: url("../images/bg1.jpg");
+}
+</style>
+</head>
+<body>
+<h1>Überschrift 1</h1>
+<p>Paragraph</p>
+</body>
+</html>
+</xmp></td>
+</tr>
+<tr>
+<td><iframe src="css/background2.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<head>
+<style>
+body {
+    background-color: white;
+    background-image: url("../images/bg2.jpg");
+    background-repeat: repeat-x;
+}
+</style>
+</head>
+<body>
+<h1>Überschrift 1</h1>
+<p>Paragraph</p>
+</body>
+</html>
+</xmp></td>
+</tr>
+<tr>
+<td><iframe src="css/background3.html" height="300" width="600"></iframe></td>
+<td><xmp>
+<html>
+<head>
+<style>
+body {
+    background-image: url("../images/html5.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+</style>
+</head>
+<body>
+<h1>Überschrift 1</h1>
+<p>Paragraph</p>
+</body>
+</html>
+</xmp></td>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>background-color</cn></td>
+<td>Setzt die Hintergrundfarbe eines Elements</td>
+</tr>
+<tr>
+<td><cn>background-image</cn></td>
+<td>Setzt das Hintergrundbild eines Elements</td>
+</tr>
+<tr>
+<td><cn>background-repeat</cn></td>
+<td>Setzt wie das Hintergrundbild wiederholt wird</td>
+</tr>
+<tr>
+<td><cn>background-attachment</cn></td>
+<td>Setzt ob das Hintergrundbild fixiert ist oder mit dem Rest der Seite mitscrollt</td>
+</tr>
+<tr>
+<td><cn>background-position</cn></td>
+<td>Setzt die Startposition des Hintergrundbildes</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Eigenschaftskürzel</th>
+<th>Reihenfolge</th>
+<th>Beispiel</th>
+</tr>
+<tr>
+<td><cn>background</cn></td>
+<td><ul>
+<li><cn>background-color</cn></li>
+<li><cn>background-image</cn></li>
+<li><cn>background-repeat</cn></li>
+<li><cn>background-attachment</cn></li>
+<li><cn>background-position</cn></li>
+</ul></td>
+<td><xmp>
+body {
+    background: white url("html5.gif") no-repeat right top;
+}
+</xmp>
+</td>
+</tr>
+</table>
+
+<article>
+<h3 id="css_border">Rahmen</h3>
+<table>
+<tr>
+<td><iframe src="css/border.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>border.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="border.css">
+</head>
+<body>
+<p class="par1">Paragraph 1</p>
+<p class="par2">Paragraph 2</p>
+<p class="par3">Paragraph 3</p>
+<p class="par4">Paragraph 4</p>
+<p class="par5">Paragraph 5</p>
+<p class="par6">Paragraph 6</p>
+<p class="par7">Paragraph 7</p>
+<p class="par8">Paragraph 8</p>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+p.par1 {
+    border-width: thin;
+    border-style: dotted;
+    border-color: red;
+    border-radius: 6px;
+}
+p.par2 {
+    border-width: medium;
+    border-style: dotted dashed;
+    border-color: green;
+    border-radius: 9px;
+}
+p.par3 {
+    border-width: thick;
+    border-style: dotted dashed solid;
+    border-color: red green blue yellow;
+    border-radius: 12px;
+}
+p.par4 {
+    border-width: 5px;
+    border-style: dotted dashed solid double;
+}
+p.par5 {
+    border-width: 2px 10px 5px 20px;
+    border-style: groove ridge inset outset;
+    border-color: blue;
+}
+p.par6 {
+    border-style: none;
+}
+p.par7 {
+    border-style: hidden;
+}
+p.par8 {
+    border-left: 5px solid red;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<td><cn>border-width</cn><br><cn>border-bottom-width</cn><br><cn>border-left-width</cn><br><cn>border-right-width</cn><br><cn>border-top-width</cn></td>
+<td>Setzt die Breite des Rahmens</td>
+</tr>
+<tr>
+<td><cn>border-color</cn><br><cn>border-bottom-color</cn><br><cn>border-left-color</cn><br><cn>border-right-color</cn><br><cn>border-top-color</cn></td>
+<td>Setzt die Farbe des Rahmens</td>
+</tr>
+<tr>
+<tr>
+<td><cn>border-style</cn><br><cn>border-bottom-style</cn><br><cn>border-left-style</cn><br><cn>border-right-style</cn><br><cn>border-top-style</cn></td>
+<td>Setzt den Style des Rahmens</td>
+</tr>
+<tr>
+<td><cn>border-radius</cn></td>
+<td>Setzt den Radius für abgerundete Kanten</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Eigenschaftskürzel</th>
+<th>Reihenfolge</th>
+<th>Beispiel</th>
+</tr>
+<tr>
+<td><cn>border</cn><br><cn>border-bottom</cn><br><cn>border-left</cn><br><cn>border-right</cn><br><cn>border-top</cn></td>
+<td><ul>
+<li><cn>border-width</cn></li>
+<li><cn>border-style</cn> (required)</li>
+<li><cn>border-color</cn></li>
+</ul></td>
+<td><xmp>
+p {
+    border-bottom: 6px solid red;
+}
+</xmp>
+</td>
+</tr>
+</table>
+</article>
+
 </article>
 
 <h2 id="quickref">Quickref</h2>

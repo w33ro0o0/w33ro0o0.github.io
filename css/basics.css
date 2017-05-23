@@ -1,0 +1,24 @@
+/* Das ist ein CSS Kommentar */
+body {
+    background-color: yellow;
+}
+h1, p {
+    background-color: green;
+    color: yellow;
+}
+#headline1 {
+    background-color: blue;
+    color: yellow;
+}
+#paragraph1 {
+    background-color: red;
+    color: cyan;
+}
+.class1 {
+    background-color: black;
+    color: white;
+}
+p.class1 {
+    background-color: white;
+    color: black;
+}
