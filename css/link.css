@@ -1,0 +1,46 @@
+a.eins:link {
+    color: red;
+	background-color: yellow;
+}
+a.eins:visited {
+    color: yellow;
+	background-color: red;
+}
+a.eins:hover {
+    color: green;
+	background-color: blue;
+}
+a.eins:active {
+    color: blue;
+	background-color: green;
+}
+a.zwei:link, a.zwei:visited {
+    text-decoration: none;
+}
+a.zwei:hover, a.zwei:active {
+    text-decoration: underline;
+}
+a.drei:link, a.drei:visited {
+    background-color: black;
+    color: #DDDDDD;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+a.drei:hover, a.drei:active {
+    background-color: red;
+}
+a.vier:link, a.vier:visited {
+    background-color: #DDDDDD;
+    color: black;
+    border: 2px solid blue;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a.vier:hover, a.vier:active {
+    background-color: blue;
+    color: #DDDDDD;
+}

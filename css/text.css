@@ -1,0 +1,45 @@
+h1 {
+    color: green;
+    text-align: center;
+    text-decoration: overline;
+     text-shadow: 3px 2px blue;
+}
+h2 {
+    color: yellow;
+    text-align: left;
+    text-decoration: line-through;
+    word-spacing: -5px;
+    letter-spacing: 3px;
+}
+h3 {
+    color: red;
+    text-align: right;
+    text-decoration: underline;
+    word-spacing: 10px;
+    letter-spacing: -3px;
+}
+p.eins {
+    text-transform: uppercase;
+}
+p.zwei {
+    text-transform: lowercase;
+    line-height: 0.8;
+}
+p.drei {
+    text-transform: capitalize;
+    line-height: 1.8;
+}
+div {
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+}
+div.eins {
+    text-align: justify;
+    text-indent: 50px;
+}
+div.zwei {
+    white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}

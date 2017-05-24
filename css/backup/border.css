@@ -3,51 +3,34 @@ p.par1 {
     border-style: dotted;
     border-color: red;
     border-radius: 6px;
-    outline-style: dotted;
-    outline-color: cyan;
 }
 p.par2 {
     border-width: medium;
     border-style: dotted dashed;
     border-color: green;
     border-radius: 9px;
-	outline-width: thick;
-    outline-style: dashed;
-    outline-color: cyan;
 }
 p.par3 {
     border-width: thick;
     border-style: dotted dashed solid;
     border-color: red green blue yellow;
     border-radius: 12px;
-	outline-width: medium;
-    outline-style: solid;
-    outline-color: cyan;
-	outline-offset: 2px;
 }
 p.par4 {
     border-width: 5px;
     border-style: dotted dashed solid double;
-	outline-width: thin;
-    outline-style: double;
-    outline-color: cyan;
-	outline-offset: 4px;
 }
 p.par5 {
     border-width: 2px 10px 5px 20px;
     border-style: groove ridge inset outset;
-    border-color: red;
-	outline: 5px groove cyan;
+    border-color: blue;
 }
 p.par6 {
     border-style: none;
-	outline: 5px ridge cyan;
 }
 p.par7 {
     border-style: hidden;
-	outline: 5px inset cyan;
 }
 p.par8 {
     border-left: 5px solid red;
-	outline: 5px outset cyan;
 }

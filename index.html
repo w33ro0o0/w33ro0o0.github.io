@@ -4,7 +4,6 @@
 <title>HTML5 Überblick</title>
 
 <style>
-
 ul#nav {
     position: fixed;
     top: 0;
@@ -45,16 +44,15 @@ table {
 }
 
 article{
-	padding: 10px;
-	margin: 10px;
-	background: #DDDDDD;
+    padding: 10px;
+    margin: 10px;
+    background: #DDDDDD;
 
 }
 
 cn {
     font-family: courier new;
 }
-
 </style>
 
 </head>
@@ -894,7 +892,7 @@ Musterstraße 1, 1234 Musterland
   </tr>
   <tr>
     <td rowspan="2" style="border:1px solid black;vertical-align:bottom">Zelle über zwei Reihen mit Text unten</td>
-	<td style="border:1px solid black;background-color:black;color:white">Zelle mit weißem Text auf schwarzem Hintergrund</td>
+    <td style="border:1px solid black;background-color:black;color:white">Zelle mit weißem Text auf schwarzem Hintergrund</td>
     <td style="border:1px solid black;padding: 15px">Zelle mit Padding</td>
   </tr>
   <tr>
@@ -1114,7 +1112,7 @@ Musterstraße 1, 1234 Musterland
 <html>
 <body>
 <p>Symbole, die in HTML5 reserviert oder nicht am Keyboard sind:<br>
-&lt;	&gt; &amp; &quot; &apos; &cent; &pound; &yen; &euro; &copy; &reg;</p>
+&lt;    &gt; &amp; &quot; &apos; &cent; &pound; &yen; &euro; &copy; &reg;</p>
 <p>Wortpaare, die nicht durch Zeilenumbrüche getrennt werden:<br>
 100&nbsp;km/h, 100&nbsp;PS,100&nbsp;&euro;</p>
 <p>Diakritika kombinieren:<br>
@@ -1149,7 +1147,12 @@ a&#768; a&#769; a&#770; a&#771;</p>
 <ul id="tutnav">
   <li><a href="#css_basics">Basics</a></li>
   <li><a href="#css_backgrounds">Hintergründe</a></li>
-  <li><a href="#css_border">Rahmen</a></li>
+  <li><a href="#css_border">Umrandungen</a></li>
+  <li><a href="#css_space">Platz</a></li>
+  <li><a href="#css_size">Größe</a></li>
+  <li><a href="#css_text">Text</a></li>
+  <li><a href="#css_font">Fonts</a></li>
+  <li><a href="#css_link">Links</a></li>
 </ul>
 
 <article>
@@ -1327,9 +1330,10 @@ body {
 </td>
 </tr>
 </table>
+</article>
 
 <article>
-<h3 id="css_border">Rahmen</h3>
+<h3 id="css_border">Umrandungen</h3>
 <table>
 <tr>
 <td><iframe src="css/border.html" height="300" width="600"></iframe></td>
@@ -1395,21 +1399,37 @@ p.par8 {
 </tr>
 </table>
 <table>
+<tr>
 <td><cn>border-width</cn><br><cn>border-bottom-width</cn><br><cn>border-left-width</cn><br><cn>border-right-width</cn><br><cn>border-top-width</cn></td>
 <td>Setzt die Breite des Rahmens</td>
+</tr>
+<tr>
+<td><cn>border-style</cn><br><cn>border-bottom-style</cn><br><cn>border-left-style</cn><br><cn>border-right-style</cn><br><cn>border-top-style</cn></td>
+<td>Setzt den Style des Rahmens</td>
 </tr>
 <tr>
 <td><cn>border-color</cn><br><cn>border-bottom-color</cn><br><cn>border-left-color</cn><br><cn>border-right-color</cn><br><cn>border-top-color</cn></td>
 <td>Setzt die Farbe des Rahmens</td>
 </tr>
 <tr>
-<tr>
-<td><cn>border-style</cn><br><cn>border-bottom-style</cn><br><cn>border-left-style</cn><br><cn>border-right-style</cn><br><cn>border-top-style</cn></td>
-<td>Setzt den Style des Rahmens</td>
-</tr>
-<tr>
 <td><cn>border-radius</cn></td>
 <td>Setzt den Radius für abgerundete Kanten</td>
+</tr>
+<tr>
+<td><cn>outline-width</cn></td>
+<td>Setzt die Breite der Außenlinie</td>
+</tr>
+<tr>
+<td><cn>outline-style</cn></td>
+<td>Setzt den Style der Außenlinie</td>
+</tr>
+<tr>
+<td><cn>outline-color</cn></td>
+<td>Setzt die Farbe der Außenlinie</td>
+</tr>
+<tr>
+<td><cn>outline-offset</cn></td>
+<td>Setzt den Platz zwischen Außenlinie und Rand bzw. Rahmen eines Elements</td>
 </tr>
 </table>
 <table>
@@ -1432,10 +1452,538 @@ p {
 </xmp>
 </td>
 </tr>
+</tr>
+<tr>
+<td><cn>outline</cn></td>
+<td><ul>
+<li><cn>outline-width</cn></li>
+<li><cn>outline-style</cn> (required)</li>
+<li><cn>outline-color</cn></li>
+</ul></td>
+<td><xmp>
+p {
+    outline: 5px dotted red;
+}
+</xmp>
+</td>
+</tr>
 </table>
 </article>
 
+<article>
+<h3 id="css_space">Platz</h3>
+<table>
+<tr>
+<td><iframe src="css/space.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>space.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="space.css">
+</head>
+<body>
+<div class="eins">Padding Eigenschaften einzeln gesetzt</div><br>
+<div class="zwei">Padding Eigenschaftskürzel mit zwei Parametern</p></div><br>
+<div class="drei">Padding Eigenschaftskürzel mit vier Parametern</p></div><br>
+<div>
+  <p class="eins">Margin Eigenschaften einzeln gesetzt</p>
+</div><br>
+<div>
+  <p class="zwei">Margin Eigenschaftskürzel mit einem Parameter</p>
+</div><br>
+<div>
+  <p class="drei">Margin Eigenschaftskürzel mit drei Parametern</p>
+</div><br>
+<div class="inherit">
+  <p class="vier">Vererbtes Margin</p>
+</div><br>
+<div class="auto">
+  <p>Automatisches Margin</p>
+</div>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+div {
+    border: 1px solid blue;
+}
+div.inherit {
+    margin-left: 50px;
+}
+div.auto {
+    width: 300px;
+    margin: auto;
+}
+div.eins {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+div.zwei {
+    padding: 25px;
+}
+div.drei {
+    padding: 25px 50px 75px;
+}
+p.eins {
+    margin-top: 25px;
+    margin-bottom: 50;
+    margin-right: 75px;
+    margin-left: 80px;
+}
+p.zwei {
+    margin: 25px 50px;
+}
+p.drei {
+    margin: 25px 50px 75px 100px;
+}
+p.vier {
+    margin-left: inherit;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>padding-bottom</cn><br><cn>padding-left</cn><br><cn>padding-right</cn><br><cn>padding-top</cn></td>
+<td>Setzt die Größe des Platzes <b>innerhalb</b> des Rahmens eines Elements</td>
+</tr>
+<tr>
+<td><cn>margin-bottom</cn><br><cn>margin-left</cn><br><cn>margin-right</cn><br><cn>margin-top</cn></td>
+<td>Setzt die Größe des Platzes <b>außerhalb</b> des Rahmens eines Elements</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Eigenschaftskürzel</th>
+<th>Reihenfolge</th>
+<th>Beispiel</th>
+</tr>
+<tr>
+<td><cn>padding</cn></td>
+<td><ul>
+<li><cn>padding-top</cn></li>
+<li><cn>padding-right</cn></li>
+<li><cn>padding-bottom</cn></li>
+<li><cn>padding-left</cn></li>
+</ul></td>
+<td><xmp>
+div {
+    padding: 50px 30px 50px 80px;
+}
+</xmp>
+</td>
+</tr>
+<tr>
+<td><cn>margin</cn></td>
+<td><ul>
+<li><cn>margin-top</cn></li>
+<li><cn>margin-right</cn></li>
+<li><cn>margin-bottom</cn></li>
+<li><cn>margin-left</cn></li>
+</ul></td>
+<td><xmp>
+p {
+    margin: 100px 150px 100px 80px;
+}
+</xmp>
+</td>
+</tr>
+</table>
 </article>
+
+<article>
+<h3 id="css_size">Größe</h3>
+<table>
+<tr>
+<td><iframe src="css/size.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>size.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="size.css">
+</head>
+<body>
+<div class="eins">200 Pixel Höhe und 50% Breite</div><br>
+<div class="zwei">100 Pixel Höhe und 1000 Pixel Breite</div><br>
+<div class="drei">100 Pixel Höhe und 1000 Pixel maximale Breite</div>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+div {
+    background-color: cyan;
+}
+div.eins {
+    height: 200px;
+    width: 50%;
+}
+div.zwei {
+    height: 100px;
+    width: 1000px;
+}
+div.drei {
+    height: 100px;
+    max-width: 1000px;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>height</cn><br><cn>width</cn></td>
+<td>Setzt die Höhe und Breite eines Elements</td>
+</tr>
+<tr>
+<td><cn>max-height</cn><br><cn>max-width</cn></td>
+<td>Setzt die maximale Höhe und Breite eines Elements</td>
+</tr>
+<tr>
+<td><cn>min-height</cn><br><cn>min-width</cn></td>
+<td>Setzt die minimale Höhe und Breite eines Elements</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="css_text">Text</h3>
+<table>
+<tr>
+<td><iframe src="css/text.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>text.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="text.css">
+</head>
+<body>
+<h1>Überschrift Eins</h1>
+<h2>Überschrift Zwei</h2>
+<h3>Überschrift Drei</h3>
+<p class="eins">Paragraph Eins</p>
+<p class="zwei">Paragraph Zwei</p>
+<p class="drei">Paragraph Drei</p>
+<div class="eins">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div><br>
+<div class="zwei">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+h1 {
+    color: green;
+    text-align: center;
+    text-decoration: overline;
+     text-shadow: 3px 2px blue;
+}
+h2 {
+    color: yellow;
+    text-align: left;
+    text-decoration: line-through;
+    word-spacing: -5px;
+    letter-spacing: 3px;
+}
+h3 {
+    color: red;
+    text-align: right;
+    text-decoration: underline;
+    word-spacing: 10px;
+    letter-spacing: -3px;
+}
+p.eins {
+    text-transform: uppercase;
+}
+p.zwei {
+    text-transform: lowercase;
+    line-height: 0.8;
+}
+p.drei {
+    text-transform: capitalize;
+    line-height: 1.8;
+}
+div {
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+}
+div.eins {
+    text-align: justify;
+    text-indent: 50px;
+}
+div.zwei {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>color</cn></td>
+<td>Setzt die Textfarbe</td>
+</tr>
+<tr>
+<td><cn>direction</cn></td>
+<td>Setzt die Textrichtung</td>
+</tr>
+<tr>
+<td><cn>letter-spacing</cn></td>
+<td>Erhöht oder verringert den Abstand zwischen den Zeichen in einem Text</td>
+</tr>
+<tr>
+<td><cn>line-height</cn></td>
+<td>Setzt die Zeilenhöhe</td>
+</tr>
+<tr>
+<td><cn>text-align</cn></td>
+<td>Spezifiziert die horizontale Textausrichtung</td>
+</tr>
+<tr>
+<td><cn>text-decoration</cn></td>
+<td>Spezifiziert die Dekoration eines Texts</td>
+</tr>
+<tr>
+<td><cn>text-indent</cn></td>
+<td>Spezifiziert die Einrückung der ersten Zeile eines Textblocks</td>
+</tr>
+<tr>
+<td><cn>text-shadow</cn></td>
+<td>Spezifiziert den Schatteneffekt eines Textes</td>
+</tr>
+<tr>
+<td><cn>text-transform</cn></td>
+<td>Kontrolliert die Großschreibung eines Texts</td>
+</tr>
+<tr>
+<td><cn>overflow</cn><br><cn>text-overflow</cn></td>
+<td>Spezifiziert wie überschüssiger Text angezeigt/signalisiert werden soll</td>
+</tr>
+<tr>
+<td><cn>vertical-align</cn></td>
+<td>Spezifiziert die vertikale Textausrichtung</td>
+</tr>
+<tr>
+<td><cn>word-spacing</cn></td>
+<td>Erhöht oder verringert den Abstand zwischen den Worten in einem Text</td>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="css_font">Fonts</h3>
+<table>
+<tr>
+<td><iframe src="css/font.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>font.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+<h1>Überschrift Eins</h1>
+<h2>Überschrift Zwei</h2>
+<h3>Überschrift Drei</h3>
+<p class="eins">Paragraph Eins</p>
+<p class="zwei">Paragraph Zwei</p>
+<p class="drei">Paragraph Drei</p>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+h1 {
+    font-family: serif;
+    font-style: normal;
+}
+h2 {
+    font-family: sans-serif;
+    font-style: italic;
+}
+h3 {
+    font-family: monospace;
+    font-style: oblique;
+}
+p.eins {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+p.zwei {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 1.5em;
+    font-variant: small-caps;
+}
+p.drei {
+    font-family: "Courier New", "Lucida Console", monospace;
+    font-size: 75%;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>font-style</cn></td>
+<td>Definiert den Style eines Texts</td>
+</tr>
+<tr>
+<td><cn>font-variant</cn></td>
+<td>Spezifiziert ob der Text in einem small-caps Font angezeigt werden soll</td>
+</tr>
+<tr>
+<td><cn>font-weight</cn></td>
+<td>Spezifiziert die Dicke eines Textes</td>
+</tr>
+<tr>
+<td><cn>font-size</cn></td>
+<td>Spezifiziert die Schroftgröße</td>
+</tr>
+<tr>
+<td><cn>font-family</cn></td>
+<td>Spezifiziert die Schriftart</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Eigenschaftskürzel</th>
+<th>Reihenfolge</th>
+<th>Beispiel</th>
+</tr>
+<tr>
+<td><cn>font</cn></td>
+<td><ul>
+<li><cn>font-style</cn></li>
+<li><cn>font-variant</cn></li>
+<li><cn>font-weight</cn></li>
+<li><cn>font-size/line-height</cn></li>
+<li><cn>font-family</cn></li>
+</ul></td>
+<td><xmp>
+p {
+    font: italic bold 12px/30px Georgia, serif;
+}
+</xmp>
+</td>
+</tr>
+</tr>
+</table>
+</article>
+
+<article>
+<h3 id="css_link"></h3>
+<table>
+<tr>
+<td><iframe src="css/link.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>link.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="link.css">
+</head>
+<body>
+<a class="eins" href="link.html">Link Eins</a><br><br>
+<a class="zwei" href="link.html">Link Zwei</a><br><br>
+<a class="drei" href="link.html">Link Drei</a><br><br>
+<a class="vier" href="link.html">Link Vier</a>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+a.eins:link {
+    color: red;
+    background-color: yellow;
+}
+a.eins:visited {
+    color: yellow;
+    background-color: red;
+}
+a.eins:hover {
+    color: green;
+    background-color: blue;
+}
+a.eins:active {
+    color: blue;
+    background-color: green;
+}
+a.zwei:link {
+    text-decoration: none;
+}
+a.zwei:hover, a.zwei:active {
+    text-decoration: underline;
+}
+a.drei:link, a.drei:visited {
+    background-color: black;
+    color: #DDDDDD;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+a.drei:hover, a.drei:active {
+    background-color: red;
+}
+a.vier:link, a.vier:visited {
+    background-color: #DDDDDD;
+    color: black;
+    border: 2px solid blue;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a.vier:hover, a.vier:active {
+    background-color: blue;
+    color: #DDDDDD;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>a:link</cn></td>
+<td>normaler unbesuchter Link</td>
+</tr>
+<tr>
+<td><cn>a:visited</cn></td>
+<td>bereits besuchter Link</td>
+</tr>
+<tr>
+<td><cn>a:hover</cn></td>
+<td>Link unter dem Mauszeiger</td>
+</tr>
+<tr>
+<td><cn>a:active</cn></td>
+<td>Link auf den geklickt wird</td>
+</tr>
+</table>
+</article>
+
+
+
+
+
+
+
+
+
+
 
 <h2 id="quickref">Quickref</h2>
 

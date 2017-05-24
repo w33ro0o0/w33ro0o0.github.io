@@ -1,0 +1,31 @@
+div {
+    border: 1px solid red;
+}
+div.inherit {
+    margin-left: 50px;
+}
+div.auto {
+    width: 300px;
+    margin: auto;
+}
+p.eins {
+    margin-top: 25px;
+    margin-bottom: 50;
+    margin-right: 75px;
+    margin-left: 80px;
+}
+p.zwei {
+    margin: 25px;
+}
+p.drei {
+    margin: 25px 50px;
+}
+p.vier {
+    margin: 25px 50px 75px;
+}
+p.fuenf {
+    margin: 25px 50px 75px 100px;
+}
+p.sechs {
+    margin-left: inherit;
+}

@@ -1,0 +1,26 @@
+h1 {
+    font-family: serif;
+	font-style: normal;
+}
+h2 {
+    font-family: sans-serif;
+	font-style: italic;
+}
+h3 {
+    font-family: monospace;
+	font-style: oblique;
+}
+p.eins {
+    font-family: "Times New Roman", Georgia, serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+p.zwei {
+    font-family: Arial, Verdana, sans-serif;
+	font-size: 1.5em;
+	font-variant: small-caps;
+}
+p.drei {
+    font-family: "Courier New", "Lucida Console", monospace;
+	font-size: 75%;
+}
