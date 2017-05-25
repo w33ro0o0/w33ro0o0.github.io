@@ -1,0 +1,53 @@
+#a table {
+    border: 1px solid black;
+    width: 100%;
+    table-layout: auto;
+    empty-cells: hide;
+}
+#a th, #a td {
+    border: 1px solid black;
+    padding: 10px;
+}
+#a td {
+    vertical-align: bottom;
+    text-align: left;
+}
+#b table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+#b th, #b td {
+    border: 1px solid black;
+    padding: 15px;
+}
+#b td {
+    height: 50px;
+    vertical-align: center;
+    text-align: center;
+}
+#c table {
+    border: 1px solid black;
+    width: 100%;
+    caption-side: top;
+}
+#c th {
+    background-color: blue;
+    color: white;
+}
+#c td {
+    vertical-align: top;
+    text-align: right;
+}
+#d table {
+    border-collapse: collapse;
+    width: 100%;
+    caption-side: bottom;
+}
+#d th, #d td {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+#d tr:hover{background-color:#bbbbbb}
+#a tr:nth-child(even) {background-color: #bbbbbb}

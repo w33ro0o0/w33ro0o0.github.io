@@ -1,0 +1,26 @@
+ul.a {
+    list-style-type: circle;
+    list-style-position:inside;
+}
+ul.b {
+    list-style-type: square;
+    list-style-position:outside;
+}
+ol.c {
+    list-style-type: upper-roman;
+    background: lightred;
+    padding: 20px;
+}
+ol.d {
+    list-style-type: lower-alpha;
+    background: lightblue;
+    margin-left: 35px;
+}
+ul.e {
+    list-style-image: url("../images/liststyle.jpg");
+}
+ul.f {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

@@ -8,7 +8,6 @@ ul#nav {
     position: fixed;
     top: 0;
 }
-
 ul#nav, ul#tutnav {
     width: 100%;
     list-style-type: none;
@@ -17,12 +16,10 @@ ul#nav, ul#tutnav {
     overflow: hidden;
     background-color: #333;
 }
-
 ul#nav li, ul#tutnav li {
     float: left;
     border-right:1px solid #bbb;
 }
-
 ul#nav li a, ul#tutnav li a {
     display: block;
     color: white;
@@ -30,26 +27,24 @@ ul#nav li a, ul#tutnav li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-
 ul#nav li a:hover:not(.active), ul#tutnav li a:hover:not(.active) {
     background-color: #111;
 }
-
 th, td {
     padding: 10px;
 }
-
+td {
+    vertical-align: top;
+}
 table {
     border-spacing: 5px;
 }
-
 article{
     padding: 10px;
     margin: 10px;
     background: #DDDDDD;
 
 }
-
 cn {
     font-family: courier new;
 }
@@ -1153,6 +1148,11 @@ a&#768; a&#769; a&#770; a&#771;</p>
   <li><a href="#css_text">Text</a></li>
   <li><a href="#css_font">Fonts</a></li>
   <li><a href="#css_link">Links</a></li>
+  <li><a href="#css_list">Listen</a></li>
+  <li><a href="#css_table">Tabelle</a></li>
+  <li><a href="#css_position">Position</a></li>
+  <li><a href="#css_overflow">Overflow</a></li>
+  <li><a href="#css_float">Float</a></li>
 </ul>
 
 <article>
@@ -1684,7 +1684,7 @@ h1 {
     color: green;
     text-align: center;
     text-decoration: overline;
-     text-shadow: 3px 2px blue;
+    text-shadow: 3px 2px blue;
 }
 h2 {
     color: yellow;
@@ -1767,7 +1767,7 @@ div.zwei {
 <td>Kontrolliert die Großschreibung eines Texts</td>
 </tr>
 <tr>
-<td><cn>overflow</cn><br><cn>text-overflow</cn></td>
+<td><cn>text-overflow</cn></td>
 <td>Spezifiziert wie überschüssiger Text angezeigt/signalisiert werden soll</td>
 </tr>
 <tr>
@@ -1975,17 +1975,653 @@ a.vier:hover, a.vier:active {
 </table>
 </article>
 
+<article>
+<h3 id="css_list">Listen</h3>
+<table>
+<tr>
+<td><iframe src="css/list.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>list.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="list.css">
+</head>
+<body>
+<ul class="a">
+  <li>Lorem</li>
+  <li>Ipsum</li>
+</ul>
+<ul class="b">
+  <li>Lorem</li>
+  <li>Ipsum</li>
+</ul>
+<ol class="c">
+  <li>Lorem</li>
+  <li>Ipsum</li>
+</ol>
+<ol class="d">
+  <li>Lorem</li>
+  <li>Ipsum</li>
+</ol>
+<ul class="e">
+  <li>Lorem</li>
+  <li>Ipsum</li>
+</ul>
+<ul class="f">
+  <li>Lorem</li>
+  <li>Ipsum</li>
+</ul>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+ul.a {
+    list-style-type: circle;
+    list-style-position:inside;
+}
+ul.b {
+    list-style-type: square;
+    list-style-position:outside;
+}
+ol.c {
+    list-style-type: upper-roman;
+    background: lightred;
+    padding: 20px;
+}
+ol.d {
+    list-style-type: lower-alpha;
+    background: lightblue;
+    margin-left: 35px;
+}
+ul.e {
+    list-style-image: url("../images/liststyle.jpg");
+}
+ul.f {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>list-style-type</cn></td>
+<td>Definiert die Art des Aufzählungszeichens</td>
+</tr>
+<tr>
+<td><cn>list-style-position</cn></td>
+<td>Spezifiziert ob das Aufzählungszeichen innerhalb oder außerhalb des Inhaltsflusses erscheinen soll</td>
+</tr>
+<tr>
+<td><cn>list-style-image</cn></td>
+<td>Spezifiziert ein Bild als Aufzählungspunkt</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Eigenschaftskürzel</th>
+<th>Reihenfolge</th>
+<th>Beispiel</th>
+</tr>
+<tr>
+<td><cn>list-style</cn></td>
+<td><ul>
+<li><cn>list-style-type</cn></li>
+<li><cn>list-style-position</cn></li>
+<li><cn>list-style-image</cn></li>
+</ul></td>
+<td><xmp>
+ul {
+    list-style: square inside url("liststyle.jpg");
+}
+</xmp>
+</td>
+</tr>
+</tr>
+</table>
+</article>
 
+<article>
+<h3 id="css_table">Tabellen</h3>
+<table>
+<tr>
+<td><iframe src="css/table.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>table.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="table.css">
+</head>
+<body>
+<table id="a">
+  <caption>Tabelle 1</caption>
+  <tr><th>Vorname</th><th>Nachname</th><th>Alter</th></tr>
+  <tr><td>Max</td><td>Mustermann</td><td>30</td></tr>
+  <tr><td>Erika</td><td></td><td>30</td></tr>
+  <tr><td>John</td><td>Doe</td><td>30</td></tr>
+</table>
+<br>
+<table id="b">
+  <caption>Tabelle 2</caption>
+  <tr><th>Vorname</th><th>Nachname</th><th>Alter</th></tr>
+  <tr><td>Max</td><td>Mustermann</td><td>30</td></tr>
+  <tr><td>Erika</td><td>Mustermann</td><td>30</td></tr>
+  <tr><td>John</td><td>Doe</td><td>30</td></tr>
+</table>
+<br>
+<table id="c">
+  <caption>Tabelle 3</caption>
+  <tr><th>Vorname</th><th>Nachname</th><th>Alter</th></tr>
+  <tr><td>Max</td><td>Mustermann</td><td>30</td></tr>
+  <tr><td>Erika</td><td>Mustermann</td><td>30</td></tr>
+  <tr><td>John</td><td>Doe</td><td>30</td></tr>
+</table>
+<br>
+<table id="d">
+  <caption>Tabelle 4</caption>
+  <tr><th>Vorname</th><th>Nachname</th><th>Alter</th></tr>
+  <tr><td>Max</td><td>Mustermann</td><td>30</td></tr>
+  <tr><td>Erika</td><td>Mustermann</td><td>30</td></tr>
+  <tr><td>John</td><td>Doe</td><td>30</td></tr>
+</table>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+#a table {
+    border: 1px solid black;
+    width: 100%;
+    table-layout: auto;
+    empty-cells: hide;
+}
+#a th, #a td {
+    border: 1px solid black;
+    padding: 10px;
+}
+#a td {
+    vertical-align: bottom;
+    text-align: left;
+}
+#b table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+#b th, #b td {
+    border: 1px solid black;
+    padding: 15px;
+}
+#b td {
+    height: 50px;
+    vertical-align: center;
+    text-align: center;
+}
+#c table {
+    border: 1px solid black;
+    width: 100%;
+    caption-side: top;
+}
+#c th {
+    background-color: blue;
+    color: white;
+}
+#c td {
+    vertical-align: top;
+    text-align: right;
+}
+#d table {
+    border-collapse: collapse;
+    width: 100%;
+    caption-side: bottom;
+}
+#d th, #d td {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+#d tr:hover{background-color:#bbbbbb}
+#a tr:nth-child(even) {background-color: #bbbbbb}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>border-collapse</cn></td>
+<td>Spezifiziert ob Rahmen der Tabelle zusammenfallen sollen</td>
+</tr>
+<tr>
+<td><cn>border-spacing</cn></td>
+<td>Spezifiziert den Abstand zwischen den Rahmen benachbarter Zellen</td>
+</tr>
+<tr>
+<td><cn>caption-side</cn></td>
+<td>Spezifiziert die Platzierung der Tabellenbeschreibung</td>
+</tr>
+<tr>
+<td><cn>empty-cells</cn></td>
+<td>Spezifiziert ob Rahmen und Hintergrund für leere Zellen angezeigt werden</td>
+</tr>
+<tr>
+<td><cn>table-layout</cn></td>
+<td>Spezifiziert das verwendete automatische Layout der Tabelle</td>
+</tr>
+</table>
+</article>
 
+<article>
+<h3 id="css_position">Position</h3>
+<table>
+<tr>
+<td><iframe src="css/position.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>position.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="position.css">
+</head>
+<body>
+<div class="static">position: static;</div><br>
+<div class="fixed">position: fixed;</div><br>
+<div class="relative">position: relative;
+  <div class="absolute">position: absolute;</div>
+</div><br>
+<img class="a" src="../images/html5.gif">
+<div class="container">
+  <img class="b" src="../images/bg2.jpg" width="600" height="200">
+  <div class="bottomright">Lorem Ipsum</div>
+</div>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+div.static {
+    border: 3px solid green;
+    position: static;
+}
+div.relative {
+    border: 3px solid red;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    left: 30px;
+} 
+div.absolute {
+    border: 3px solid yellow;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+}
+div.fixed {
+    border: 3px solid blue;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    z-index: 1;
+}
+img.a {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    opacity: 0.3;
+}
+div.container {
+    position: relative;
+}
+div.bottomright {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>bottom</cn></td>
+<td>Setzt den unteren Rand einer positionierten Box</td>
+</tr>
+<tr>
+<td><cn>left</cn></td>
+<td>Setzt den linken Rand einer positionierten Box</td>
+</tr>
+<tr>
+<td><cn>position</cn></td>
+<td>Definiert den Typ der Positionierung eines Elements</td>
+</tr>
+<tr>
+<td><cn>right</cn></td>
+<td>Setzt den rechten Rand einer positionierten Box</td>
+</tr>
+<tr>
+<td><cn>top</cn></td>
+<td>Setzt den oberen Rand einer positionierten Box</td>
+</tr>
+<tr>
+<td><cn>z-index</cn></td>
+<td>Definiert die Anzeigereihenfolge eines Elements</td>
+</tr>
+<tr>
+<td><cn>opacity</cn></td>
+<td>Definiert die Transparenz eines Elements</td>
+</tr>
+</table>
+</article>
 
+<article>
+<h3 id="css_overflow">Overflow</h3>
+<table>
+<tr>
+<td><iframe src="css/overflow.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>overflow.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="overflow.css">
+</head>
+<body>
+<div class="a">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua.</div><br>
+<div class="b">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua.</div><br>
+<div class="c">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua.</div><br>
+<div class="d">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua.</div><br>
+<div class="e">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua.</div><br>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+div {
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+}
+div.a {
+    overflow: hidden;
+}
+div.b {
+    overflow: scroll;
+}
+div.c {
+    overflow: auto;
+}
+div.d {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+div.e {
+    overflow: visible;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>overflow</cn></td>
+<td>Spezifiziert was mit Inhalt passiert, der die Box eines elements überragt</td>
+</tr>
+<tr>
+<td><cn>overflow-x</cn></td>
+<td>Spezifiziert was mit den linken/rechten Rändern von überragendem Inhalt passiert</td>
+</tr>
+<tr>
+<td><cn>overflow-y</cn></td>
+<td>Spezifiziert was mit den loberen/unteren Rändern von überragendem Inhalt passiert</td>
+</tr>
+</table>
+</article>
 
-
-
-
-
-
+<article>
+<h3 id="css_float">Float</h3>
+<table>
+<tr>
+<td><iframe src="css/float.html" height="300" width="600"></iframe></td>
+<td></td>
+<tr><th>HTML</th><th>float.css</th></tr>
+<tr>
+<td><xmp>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="float.css">
+</head>
+<body>
+<div class="a">float: left</div>
+<div class="b">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua.</div>
+<br><br>
+<div class="a">float: left</div>
+<div class="c">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua.</div>
+<br>
+<div class="d"><img src="../images/html5.gif">
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, s
+ed diam voluptua.</div>
+<div class="e">display: inline-block</div>
+<div class="e">display: inline-block</div>
+<div class="e">display: inline-block</div>
+</body>
+</html>
+</xmp></td>
+<td><xmp>
+div.a {
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border: 3px solid green;
+}
+div.b {
+    border: 1px solid red;
+}
+div.c {
+    border: 1px solid red;
+    clear: left;
+}
+div.d {
+    border: 3px solid green;
+    overflow: auto;
+}
+div.e {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid blue; 
+}
+img {
+    float: right;
+}
+</xmp></td>
+</tr>
+</tr>
+</table>
+<table>
+<tr>
+<td><cn>float</cn></td>
+<td>Spezifiziert ob ein Element schweben soll</td>
+</tr>
+<tr>
+<td><cn>clear</cn></td>
+<td>Spezifiziert auf welcher Seite eines Elemnts keine schwebenden Elemente erlaubt sind</td>
+</tr>
+</table>
+</article>
 
 <h2 id="quickref">Quickref</h2>
+<article>
+<table>
+<tr>
+<th>HTML5 Elemente</th>
+<th>CSS3 Eigenschaften</th>
+</tr>
+<tr><td>
+<a href="#link">&lta&gt</a><br>
+<a href="#quote">&ltabbr&gt</a><br>
+<a href="#quote">&ltaddress&gt</a><br>
+<a href="#image">&ltarea&gt</a><br>
+<a href="#format">&ltb&gt</a><br>
+<a href="#quote">&ltbdo&gt</a><br>
+<a href="#quote">&ltblockquote&gt</a><br>
+<a href="#basics">&ltbody&gt</a><br>
+<a href="#basics">&ltbr&gt</a><br>
+<a href="#table">&ltcaption&gt</a><br>
+<a href="#quote">&ltcite&gt</a><br>
+<a href="#code">&ltcode&gt</a><br>
+<a href="#list">&ltdd&gt</a><br>
+<a href="#format">&ltdel&gt</a><br>
+<a href="#section">&ltdiv&gt</a><br>
+<a href="#list">&ltdl&gt</a><br>
+<a href="#list">&ltdt&gt</a><br>
+<a href="#format">&ltem&gt</a><br>
+<a href="#basics">&lth1&gt</a><br>
+<a href="#basics">&lth2&gt</a><br>
+<a href="#basics">&lth3&gt</a><br>
+<a href="#basics">&lth4&gt</a><br>
+<a href="#basics">&lth5&gt</a><br>
+<a href="#basics">&lth6&gt</a><br>
+<a href="#basics">&lthead&gt</a><br>
+<a href="#basics">&lthr&gt</a><br>
+<a href="#basics">&lthtml&gt</a><br>
+<a href="#format">&lti&gt</a><br>
+<a href="#image">&ltimg&gt</a><br>
+<a href="#format">&ltins&gt</a><br>
+<a href="#code">&ltkbd&gt</a><br>
+<a href="#list">&ltli&gt</a><br>
+<a href="#image">&ltmap&gt</a><br>
+<a href="#format">&ltmark&gt</a><br>
+<a href="#list">&ltol&gt</a><br>
+<a href="#basics">&ltp&gt</a><br>
+<a href="#basics">&ltpre&gt</a><br>
+<a href="#quote">&ltq&gt</a><br>
+<a href="#code">&ltsamp&gt</a><br>
+<a href="#format">&ltsmall&gt</a><br>
+<a href="#section">&ltspan&gt</a><br>
+<a href="#format">&ltstrong&gt</a><br>
+<a href="#format">&ltsub&gt</a><br>
+<a href="#format">&ltsup&gt</a><br>
+<a href="#table">&lttable&gt</a><br>
+<a href="#table">&lttd&gt</a><br>
+<a href="#table">&ltth&gt</a><br>
+<a href="#basics">&lttile&gt</a><br>
+<a href="#table">&lttr&gt</a><br>
+<a href="#list">&ltul&gt</a><br>
+<a href="#code">&ltvar&gt</a><br>
+</td><td>
+<a href="#css_backgrounds">background-attachment</a><br>
+<a href="#css_backgrounds">background-color</a><br>
+<a href="#css_backgrounds">background-image</a><br>
+<a href="#css_backgrounds">background-position</a><br>
+<a href="#css_backgrounds">background-repeat</a><br>
+<a href="#css_border">border</a><br>
+<a href="#css_border">border-bottom</a><br>
+<a href="#css_border">border-bottom-color</a><br>
+<a href="#css_border">border-bottom-style</a><br>
+<a href="#css_border">border-bottom-width</a><br>
+<a href="#css_table">border-collapse</a><br>
+<a href="#css_border">border-color</a><br>
+<a href="#css_border">border-left</a><br>
+<a href="#css_border">border-left-color</a><br>
+<a href="#css_border">border-left-style</a><br>
+<a href="#css_border">border-left-width</a><br>
+<a href="#css_border">border-radius</a><br>
+<a href="#css_border">border-right</a><br>
+<a href="#css_border">border-right-color</a><br>
+<a href="#css_border">border-right-style</a><br>
+<a href="#css_border">border-right-width</a><br>
+<a href="#css_table">border-spacing</a><br>
+<a href="#css_border">border-style</a><br>
+<a href="#css_border">border-top</a><br>
+<a href="#css_border">border-top-color</a><br>
+<a href="#css_border">border-top-style</a><br>
+<a href="#css_border">border-top-width</a><br>
+<a href="#css_border">border-width</a><br>
+<a href="#css_position">bottom</a><br>
+<a href="#css_table">caption-side</a><br>
+<a href="#css_float">clear</a><br>
+<a href="#css_text">color</a><br>
+<a href="#css_text">direction</a><br>
+<a href="#css_table">empty-cells</a><br>
+<a href="#css_float">float</a><br>
+<a href="#css_font">font</a><br>
+<a href="#css_font">font-family</a><br>
+<a href="#css_font">font-size</a><br>
+<a href="#css_font">font-style</a><br>
+<a href="#css_font">font-variant</a><br>
+<a href="#css_font">font-weight</a><br>
+<a href="#css_size">height</a><br>
+<a href="#css_position">left</a><br>
+<a href="#css_text">letter-spacing</a><br>
+<a href="#css_text">line-height</a><br>
+<a href="#css_list">list-style</a><br>
+<a href="#css_list">list-style-image</a><br>
+<a href="#css_list">list-style-position</a><br>
+<a href="#css_list">list-style-type</a><br>
+<a href="#css_space">margin</a><br>
+<a href="#css_space">margin-bottom</a><br>
+<a href="#css_space">margin-left</a><br>
+<a href="#css_space">margin-right</a><br>
+<a href="#css_space">margin-top</a><br>
+<a href="#css_size">max-height</a><br>
+<a href="#css_size">max-width</a><br>
+<a href="#css_size">min-height</a><br>
+<a href="#css_size">min-width</a><br>
+<a href="#css_position">opacity</a><br>
+<a href="#css_border">outline</a><br>
+<a href="#css_border">outline-color</a><br>
+<a href="#css_border">outline-offset</a><br>
+<a href="#css_border">outline-style</a><br>
+<a href="#css_border">outline-width</a><br>
+<a href="#css_overflow">overflow</a><br>
+<a href="#css_overflow">overflow-x</a><br>
+<a href="#css_overflow">overflow-y</a><br>
+<a href="#css_space">padding</a><br>
+<a href="#css_space">padding-bottom</a><br>
+<a href="#css_space">padding-left</a><br>
+<a href="#css_space">padding-right</a><br>
+<a href="#css_space">padding-top</a><br>
+<a href="#css_position">position</a><br>
+<a href="#css_position">right</a><br>
+<a href="#css_table">table-layout</a><br>
+<a href="#css_text">text-align</a><br>
+<a href="#css_text">text-decoration</a><br>
+<a href="#css_text">text-indent</a><br>
+<a href="#css_text">text-overflow</a><br>
+<a href="#css_text">text-shadow</a><br>
+<a href="#css_text">text-transform</a><br>
+<a href="#css_position">top</a><br>
+<a href="#css_text">vertical-align</a><br>
+<a href="#css_size">width</a><br>
+<a href="#css_text">word-spacing</a><br>
+<a href="#css_position">z-index</a><br>
+</td></tr></table>
+</article>
 
 </body>
 

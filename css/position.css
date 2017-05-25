@@ -1,0 +1,42 @@
+div.static {
+    border: 3px solid green;
+    position: static;
+}
+div.relative {
+    border: 3px solid red;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    left: 30px;
+} 
+div.absolute {
+    border: 3px solid yellow;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+}
+div.fixed {
+    border: 3px solid blue;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    z-index: 1;
+}
+img.a {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    opacity: 0.3;
+}
+div.container {
+    position: relative;
+}
+div.bottomright {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}

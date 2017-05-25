@@ -1,0 +1,21 @@
+div {
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+}
+div.a {
+    overflow: hidden;
+}
+div.b {
+    overflow: scroll;
+}
+div.c {
+    overflow: auto;
+}
+div.d {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+div.e {
+    overflow: visible;
+}
